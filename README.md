@@ -6,7 +6,7 @@ mkdir -p ~/mtproxy
 cd ~/mtproxy
 
 # Download
-curl -O https://raw.githubusercontent.com/bors2908/mtproxy-container/main/Dockerfile
+curl -O https://raw.githubusercontent.com/bors2908/mtproxy-container/refs/heads/master/Dockerfile
 
 # Build
 docker buildx build -t me.bors.mtproxy:latest --load .
