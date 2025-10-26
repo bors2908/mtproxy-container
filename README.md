@@ -12,7 +12,7 @@ curl -O https://raw.githubusercontent.com/bors2908/mtproxy-container/main/Docker
 docker buildx build -t me.bors.mtproxy:latest --load .
 
 # Run
-docker run -d --name mtproxy -p 443:443 me.bors.mtproxy:latest
+docker run -d --name mtproxy -p 443:443 --restart unless-stopped me.bors.mtproxy:latest
 
 # Get generated secret
 docker exec mtproxy cat /etc/mtproto-proxy/mt_secret
