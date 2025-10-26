@@ -10,6 +10,7 @@ curl -O https://raw.githubusercontent.com/bors2908/mtproxy-container/main/Docker
 
 # Build
 docker buildx build -t me.bors.mtproxy:latest --load .
+
 # Run
 docker run -d --name mtproxy -p 443:443 me.bors.mtproxy:latest
 
